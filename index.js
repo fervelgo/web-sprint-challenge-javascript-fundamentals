@@ -153,7 +153,9 @@ function greeting(first, last){
 // 🦁💪 Stretch: If you haven't already, convert your array method callbacks into arrow functions - make sure you comment out this section before you submit your work 🦁💪
  
 
-
+/*let add = (num1,num2,add) => {return num1+num2;}
+let multiply = (num1,num2,multiply) => {return num1*num2;}
+let greeting = (first,last) => {return `Hello ${first} ${last}, nice to meet you!`;} */
 
 
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
