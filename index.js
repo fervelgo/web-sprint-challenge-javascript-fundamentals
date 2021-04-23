@@ -17,6 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
+/* const internal is within the limits of the myFunction function, in other words, inside the curly braces that delimit myFunction. This sets it within the scope of the function and therefore it's accessible to whatever happens inside myFunction. const external is outside this scope. 
 
 
 
@@ -28,9 +29,11 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let sum = 0
+  for (let i = 0; i <= number; i++)
+    sum = sum + i;
+    return sum;
   }
  
 
@@ -56,8 +59,12 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(array){
+    const displayNames = array.map(function(item){
+        return `name: ${item.animal_name}, scientific: ${item.scientific_name}`;
+    });
+
+    return displayNames
   }
   
 
@@ -67,8 +74,11 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+    const lowerCaseAnimals = array.map(function (item){
+      return item.animal_name.toLowerCase();
+    });
+    return lowerCaseAnimals
   }
   
   
@@ -77,8 +87,11 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(array){
+    const lowPopulationAnimals = array.filter(function(item) {
+      return item.population < 5
+    });
+    return lowPopulationAnimals
   }
   
 
